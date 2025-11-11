@@ -1,0 +1,227 @@
+/* ======= RESET ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ======= BODY ======= */
+body {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* ======= HEADER ======= */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lang-select {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.lang-select option {
+  color: black;
+}
+
+.btn-login {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #b00710;
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/a1dc92ca-091d-4ca9-a05b-8cd44bbfce6a/f9368347-e982-4856-a5a4-396796381f28/RS-en-20191230-popsignuptwoweeks-perspective_alpha_website_large.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.email-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.email-box input {
+  width: 300px;
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn-start {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-start:hover {
+  background-color: #b00710;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .email-box input {
+    width: 100%;
+  }
+}
+/* ====== FILMS SECTION ====== */
+.films {
+  background-color: #000;
+  padding: 40px 20px;
+}
+
+.films h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.film-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto; /* يسمح بالتمرير الأفقي */
+  scroll-behavior: smooth;
+}
+
+.film-row img {
+  width: 200px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.film-row img:hover {
+  transform: scale(1.1);
+}
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.film-row {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
+.film-row img {
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.film-row img:hover {
+    transform: scale(1.1);
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.slide-btn.left {
+    left: 5px;
+}
+
+.slide-btn.right {
+    right: 5px;
+}
+
